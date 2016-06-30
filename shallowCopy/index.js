@@ -15,13 +15,7 @@
  *
  **/
 var shallowCopy = function (value) {
-  // in ES2017 we can use
-  // return Object.create(Object.getPrototypeOf(value), Object.getOwnPropertyDescriptors(value));
-  let propDescriptors = {};
-  for (let i of Object.getOwnPropertyNames(value)) {
-    propDescriptors[i] = Object.getOwnPropertyDescriptor(value, i);
-  }
-  return Object.create(Object.getPrototypeOf(value), propDescriptors);
+  return Object.assign(new (Object.getPrototypeOf(value).constructor)(),value);
 };
 
 module.exports = shallowCopy;
