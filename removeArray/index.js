@@ -18,7 +18,7 @@
  *
  **/
 var removeArray = function (arr, index) {
-  arr.splice(index , 1);
+  arr.splice(index, 1);
 };
 
 module.exports = removeArray;
