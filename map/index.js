@@ -10,7 +10,7 @@
  *
  **/
 var map = function (arr, func, ctx) {
-  let result = [];
+  const result = [];
   for (let element of arr) {
     result.push(func.call(ctx, element));
   }

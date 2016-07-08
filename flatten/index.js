@@ -8,7 +8,7 @@
  *
  **/
 var flatten = function (array) {
-  let result = [];
+  const result = [];
   for (let element of array) {
     if (Array.isArray(element)) {
       result.push(...flatten(element));

@@ -8,7 +8,7 @@
  *  reduce([{name: 'nan', age: 2}, {name: 'fang', age: 3}], function(previous, i){ return previous + i.name;  }, 'Hello ') = Hello nanfeng
  *
  **/
-var reduce = function(arr, func, initialValue) {
+var reduce = function (arr, func, initialValue) {
   let value, arrLoop;
   if (typeof initialValue === 'undefined') {
     switch (typeof arr[0]) {
